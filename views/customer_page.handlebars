@@ -1,0 +1,56 @@
+    <style>
+      div.scroll{
+      width:600px;
+      height:700px;
+      overflow:scroll;
+      }
+
+    </style>
+    <div class="container">
+
+      <!-- Page Heading -->
+<br/><br/>
+
+      <h1 class="my-4" color="green" >Kisan Helper :
+        <small>Product Availability</small>
+      </h1>
+
+      <!-- Project One -->
+      <div class="row">
+        </div>
+        <div class="col-md-5">
+          
+          
+        </div>
+      </div>
+      <!-- /.row -->
+      <br/><br/>
+
+      <!-- Project Two -->
+      <div class="row">
+        
+        </div>
+        <div class="col-md-5">
+              <a href="/get-data1" style="font-size:40px;">LOAD DATA</a>
+              <div class="scroll">
+                     
+                    {{# each items }}
+                       
+                             <div>product_name: {{ this.product_name }}</div>
+                            <div>price: {{ this.price }}</div>
+                            <div>kg: {{ this.kg }}</div>
+                            <div>date: {{ this.date }}</div>
+                            <div>type: {{ this.types }}</div>
+                            <a href="/map">Find Place</a>
+                            <hr>
+                       
+                    {{/each}}
+               
+              </div>
+        </div><br/>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+ 

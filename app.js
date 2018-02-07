@@ -17,8 +17,12 @@ mongoose.connect('mongodb://localhost/customer');
 var db = mongoose.connection;
 
 var index = require('./routes/index');
-var customer = require('./routes/customer');
 var farmer = require('./routes/farmer');
+var product = require('./routes/product');
+
+// var customer = require('./routes/customer');
+// var farmer = require('./routes/farmer');
+// var product = require('./routes/product');
 
 
 
@@ -81,12 +85,17 @@ app.use(function (req, res, next) {
 
 
 app.use('/', index);
-app.use('/customer', customer);
 app.use('/farmer', farmer);
+app.use('/product', product);
+
+
+// app.use('/customer', customer);
+// app.use('/farmer', farmer);
+// app.use('/product', product);
 
 
 // Set Port
-app.set('port', (process.env.PORT || 8000));
+app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function(){
 	console.log('Server started on port '+app.get('port'));

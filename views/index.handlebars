@@ -1,76 +1,2805 @@
-<div class="form">
-      
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Farmers</a></li>
-        <li class="tab"><a href="#login">Customers</a></li>
-      </ul>
-      
-      <div class="tab-content">
-        <div id="signup"> 
-        <h1>Welcome Farmers!</h1>  
-         
-          
-          <form method="post" action="/farmer/login" >
-          
-          
-        
-            <div class="field-wrap">
-              
-              
-          </div>
+<script>
+function altfn() {
+  window.alert("Try about Sign_In");
+}
+</script>
 
-          <div class="field-wrap">
-            <label>
-              Farmer Name<span class="req">*</span>
-            </label>
-            <input type="text" name="username" required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" name="password" required autocomplete="off"/>
-          </div>
-          
-           <p><a href="/farmer/register">Create User</a></p>
-          
-          <button class="button button-block"/>Sign in</button>
-          
-          
-          </form>
 
-        </div>
-        
-        <div id="login">   
-          <h1>Welcome Customers!</h1>
-          
-          <form action="/customer/login" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Name<span class="req">*</span>
-            </label>
-            <input type="text" name="username" required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" name="password" required autocomplete="off"/>
-          </div>
 
-          
-          <p><a href="/customer/register">Create User</a></p>
 
-          
-          <button class="button button-block"/>Sign in</button>
-          
-          </form>
-
-        </div>
-        
+     <div class="col-md-8 header" style="margin-left:800px;  margin-top:-80px;">
+        <!-- header lists -->
+        <ul>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal1">
+              <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal2">
+              <span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+          </li>
+        </ul>
+    
+        <div class="clearfix"></div>
       </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body modal-body-sub_agile">
+          <div class="main-mailposi">
+            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+          </div>
+          <div class="modal_body_left modal_body_left1">
+            <h3 class="agileinfo_sign">Sign In(Farmer) </h3>
+            <p>
+              Sign In now, Let's start your Kisan Helper. Don't have an account?
+              <a href="#" data-toggle="modal" data-target="#myModal2">
+                Sign Up Now</a>
+            </p>
+            <form action="/login" method="post">
+              <div class="styled-input agile-styled-input-top">
+                <input type="text" placeholder="User Name" name="username" required="">
+              </div>
+              <div class="styled-input">
+                <input type="password" placeholder="Password" name="password" required="">
+              </div>
+              <input type="submit" value="Sign In">
+            </form>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- //Modal content-->
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body modal-body-sub_agile">
+          <div class="main-mailposi">
+            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+          </div>
+          <div class="modal_body_left modal_body_left1">
+            <h3 class="agileinfo_sign">Sign Up</h3>
+            <p>
+              Come join the Grocery Shoppy! Let's set up your Account.
+            </p>
+        <form action="/register" method="post">
+              <div class="styled-input agile-styled-input-top">
+                <input type="text" placeholder="Name" name="Name" required="">
+              </div>
+              
+              <div class="styled-input">
+                <input type="text" placeholder="Contact-Number" name="number" required="">
+              </div>
+              <div class="styled-input">
+                <input type="text" placeholder="Farmer ID" name="farmer_id" required="">
+              </div>
+              <div class="styled-input">
+                <input type="password" placeholder="Password" name="password" id="password" required="">
+              </div>
+
+              <div class="styled-input">
+                <input type="password" placeholder="Confirm Password" name="Confirm_Password" id="password2" required="">
+              </div>
+              <div class="styled-input">
+                <input type="text" placeholder="Street Name" name="stname"  required="">
+              </div>
+              <div class="styled-input">
+                <input type="text" placeholder="City" name="City" required="">
+              </div>
+              <div class="styled-input">
+                <input type="text" placeholder="State" name="state"  required="">
+              </div>
+              <input type="submit" value="Sign Up">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- //Modal content-->
+    </div>
+  </div>
+     <div class="ban-top">
+    <div class="container">
+     
+      <div class="top_nav_left">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1" >
+              <ul class="nav navbar-nav menu__list">
+                <li class="">
+                  <a class="nav-stylehead" href="#veges">Vegetables
+                    
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-stylehead" href="#Fruits">Fruits</a>
+                </li>
+                <li class="">
+                  <a class="nav-stylehead" href="#Cereals">Cereals
+                    
+                  </a>
+                  
+                </li>
+                <li class="">
+                  <a href="#Pulses" class="nav-stylehead">Pulses
+                    
+                  </a>
+                  
+
+                </li>
+                <li class="">
+                  <a class="nav-stylehead" href="#Dairy">Dairy Products</a>
+                </li>
+                <li class="">
+                  <a class="nav-stylehead" href="#Eggs">Eggs
+                    
+                  </a>
       
-</div>
+                </li>
+               
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
+  <!-- //navigation -->
+  <!-- banner -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="container">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+      </div>
+      <div class="item item2">
+        <div class="container">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+      </div>
+      <div class="item item3">
+        <div class="container">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+      </div>
+      <div class="item item4">
+        <div class="container">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+      <div class="agileinfo-ads-display col-md-12">
+        <div class="wrapper">
+          <!-- first section (nuts) -->
+          <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="veges"></a> Fresh Vegetables</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Pumpkin.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Pumpkin</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Peas.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      s
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Peas</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/brin.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Brinjal</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Tomato.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/cutomer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+          
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Tomato</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+      <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Onion.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Onion</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Garlic.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href=""onClick="altfn()"" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Garlic</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+      <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Red.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Red Chilli</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+    <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Ginger.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Ginger</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+      <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Curry Leaf.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Curry Leaf</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Beans.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Beans</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Beet Root.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Beet Root</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/King Yam.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">King Yam</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Broccoli.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Broccoli</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Amaranthus.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Amaranthus</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Elephant Yam.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Elephant Yam</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Bitter Gourd.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Bitter Gourd</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Bottle Gourd.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Bottle Gourd</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Ridge Gourd.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Ridge Gourd</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/carrot.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Carrot</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Cauliflower.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cauliflower</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Potato.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">potato</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Colocasia.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Colocasia</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Plantain Flower.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Plantain Flower</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Yam.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Yam</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Mushroom.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Mushroom</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Lady.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Lady'S Finger</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Turnip.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Turnip</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Cabbage.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cabbage</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Broad Beans.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Broad Beans</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/veges/Capsicum.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Capsicum</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+ 
+          <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="Fruits"></a> Fruits</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m1.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Apple</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m2.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Grape</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m3.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Orange</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+                           <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m4.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Mango</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+                           <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m5.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Pappaya</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m6.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Custard Apple</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m7.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Bael (Vilva)</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m8.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Bilberry</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m9.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Black Current</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m10.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Blackberry</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m11.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cantaloupe</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+                <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m12.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cashew Fruit</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+                <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m13.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cherry</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+                          <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m14.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Chickoo</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m15.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Citrus Aurantifolia</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m16.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Ooty Apple</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m17.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cucumber</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m18.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Dates</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m19.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Emvlica</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m20.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Fig</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m21.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Guava</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m22.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Jack Fruit</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m23.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Lansium</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m24.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Lemon</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m25.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Lychee</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m26.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Melon</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m27.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Peach</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m28.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Pears</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m29.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Pine Apple</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m30.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Banana</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m31.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Pomegranate</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/m32.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Watermelon</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            
+
+            
+
+            <div class="clearfix"></div>
+          </div>
+          <!-- //third section (oils) -->
+          <!-- fourth section (noodles) -->
+          <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="Cereals"></a> Cereals</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk4.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Rice</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk5.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Barley</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk6.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Buckwheat</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk17.png" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Maize</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk18.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Mustard Seeds</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk19.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Oat</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk10.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Rye</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk11.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Spelt</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/mk12.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Wheat</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            
+              
+            <div class="clearfix"></div>
+          </div>
+          <!-- //fourth section (noodles) -->
+           <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="Pulses"></a> Pulses</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p1.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Chickpeas (Brow)n</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p2.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Bean-Broad</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p3.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Red Gram</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p4.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Black Gram</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p5.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Red Beans</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p6.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Chickpeas</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p7.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Green Gream</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p8.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Ground Nuts</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p9.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Horse Gram</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p10.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Split Bengal Gram</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p11.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Urad Dal</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images1/p12.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="buy.html" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="\contact.html" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Chickpeas (White)</a>
+                  </h4>
+                  
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+          </div>
+
+
+
+          <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="Dairy"></a> Dairy Products</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/dairy/milk.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Milk</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/dairy/39e.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Curd</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/dairy/Butter.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Butter</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/dairy/Cheese.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Cheese</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/dairy/Custard.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Custard</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          
+
+                   <div class="product-sec1">
+            <h3 class="heading-tittle"><a name="Eggs"></a> Eggs</h3>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/eggs/eggs.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Native Hen Eggs</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/eggs/Duck.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Duck Eggs</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/eggs/EMU.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Emu Eggs</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/eggs/Ostrich.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Ostrich Eggs</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product-men">
+              <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                  <img src="images2/eggs/Turkey.jpg" alt="">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="/customer" style="width: 50px; margin-left: 40px; text-decoration: none;" class="link-product-add-cart">Buy</a>
+                      <a href="#" style="width: 50px; margin-left: 100px;  text-decoration: none;" class="link-product-add-cart" onClick="altfn()">Sell</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="item-info-product ">
+                  <h4>
+                    <a href="single.html">Turkey Eggs</a>
+                  </h4>
+                  <div class="info-product-price">
+                    <span class="item_price"></span>
+                    <del></del>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    
+                  </div>
+
+                </div>
+              </div>
+
+  
+
+
+                         </div>
+                         
+                  </div>  
+
+
+
+
+
+
+        </div>
+      </div>
+      <!-- //product right -->
+    </div>
+  </div>
