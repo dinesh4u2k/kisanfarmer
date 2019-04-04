@@ -1,9 +1,21 @@
-
-
 <body>
 	
 	<div class="ban-top">
 		<div class="container">
+			<div class="agileits-navi_search">
+				<form action="#" method="post">
+					<select id="agileinfo-nav_search" name="agileinfo_search" required="">
+						<option value="">All Categories</option>
+						<option value="Veges">Veges</option>
+						<option value="Fruits">Fruits</option>
+						<option value="Cereals">Cereals</option>
+						<option value="Pulses">Pulses</option>
+						<option value="Dairy Products">Dairy Products</option>
+						<option value="Eggs">Eggs</option>
+						
+					</select>
+				</form>
+			</div>
 			<div class="top_nav_left">
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">
@@ -71,7 +83,7 @@
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="/home">Home</a>
+						<a href="index.html">Home</a>
 						<i>|</i>
 					</li>
 					<li>Product Description</li>
@@ -97,6 +109,15 @@
 				<div class="contact-agileinfo">
 					<div class="contact-form wthree">
 						<form action="/insert" method="post">
+						<div class="">
+						         Farmer Name :<input type="text" name="farmer_name" style="padding: 8px; width: 300px;" placeholder=" " required="">
+							</div><p></p>
+							<div class="">
+						         Farmer number :<input type="text" name="farmer_number" style="padding: 8px; width: 300px;" placeholder=" " required="">
+							</div><p></p>
+							<div class="">
+						         Farmer address :<input type="text" name="farmer_address" style="padding: 8px; width: 300px;" placeholder=" " required="">
+							</div><p></p>
 							<div class="">
 						         Product Name :<input type="text" name="product_name" style="padding: 8px; width: 300px;" placeholder=" " required="">
 							</div><p></p>
@@ -233,12 +254,14 @@
 			<div class="contact agileits" style="width: 500px; margin-left: 600px; margin-top: -550px;">
 				<div class="contact-agileinfo">
 					<div class="contact-form wthree">
-						 
+						 <h3>Get Data</h3>
     					<a href="/get-data">LOAD DATA</a>
 							<div class="">
 						         
 						        {{# each items }}
-						           
+						           		<div>farmer_name: {{ this.farmer_name }}</div>
+										   <div>farmer_number: {{ this.farmer_number }}</div>
+										   <div>farmer_address: {{ this.farmer_address }}</div>
 						                 <div>product_name: {{ this.product_name }}</div>
 						                <div>price: {{ this.price }}</div>
 						                <div>kg: {{ this.kg }}</div>
@@ -259,11 +282,12 @@
 	</div>
 	<!-- map -->
 	<footer style="margin-top: 350px; ">
-
+	<!-- //footer -->
+	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
-			<p>© 2018 Kisan Helper. | Design by
-				<a href="#">Exploiters</a>
+			<p>© 2019 Kisan Helper. | Design by
+				<a href="http://w3layouts.com">Exploiters</a>
 			</p>
 		</div>
 	</div>

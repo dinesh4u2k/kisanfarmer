@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <style> 
+      #map { 
+        height: 400px; 
+        width: 100%; 
+       } 
+    </style> 
+  </head> 
+  <body> 
+    <h3>GFG Google Maps Demo</h3> 
+    <div id="map"></div> 
+    <script> 
+      function initMap() { 
+        var kpm = {lat: 12.8328033, lng: 79.6953807}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 12, 
+          center: kpm 
+        }); 
+        var measle = new google.maps.Marker({
+    position: new google.maps.LatLng(12.8328033, 79.6953807),
+    map: map,
+    icon: {
+      url: "https://maps.gstatic.com/intl/en_us/mapfiles/markers2/measle.png",
+      size: new google.maps.Size(7, 7),
+      anchor: new google.maps.Point(4, 4)
+    }
+  });
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(12.8328033, 79.6953807), 
+    map: map,
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+      labelOrigin: new google.maps.Point(75, 32),
+      size: new google.maps.Size(32,32),
+      anchor: new google.maps.Point(16,32)
+    },
+    label: {
+      text: "Farmer_1",
+      color: "#C70E20",
+      fontWeight: "bold"
+    }
+  });
+        // var marker = new google.maps.Marker({ 
+        //   position: new google.maps.LatLng(13.0400256, 80.2144256), 
+        //   label: { text: 'farmer1' },
+        //   map: map 
+        // }); 
+      } 
+    </script> 
+     <script async defer 
+    src= 
+"https://maps.googleapis.com/maps/api/js?key= 
+AIzaSyB2bXKNDezDf6YNVc-SauobynNHPo4RJb8&callback=initMap"> 
+    </script> 
+  </body> 
+</html> 

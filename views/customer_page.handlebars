@@ -1,16 +1,12 @@
-    <style>
-      div.scroll{
-      width:600px;
-      height:700px;
-      overflow:scroll;
-      }
-
-    </style>
-    <div class="container">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+    <div style="width:100%" class="container">
 
       <!-- Page Heading -->
-<br/><br/>
-
       <h1 class="my-4" color="green" >Kisan Helper :
         <small>Product Availability</small>
       </h1>
@@ -31,22 +27,40 @@
         
         </div>
         <div class="col-md-5">
-              <a href="/get-data1" style="font-size:40px;">LOAD DATA</a>
-              <div class="scroll">
-                     
+          <h3>Get Data</h3>
+              {{!-- <a href="/get-data1">LOAD DATA</a> --}}
+              <table style="width:100%">
+                      <tr>
+                             <th>farmer_name </th>
+										   <th>farmer_number </th>
+										   <th>farmer_address</th>
+						                
+                             <th>product_name </th>
+                            <th>price </th>
+                            <th>kg </th>
+                            <th>date </th>
+                            <th>type </th>
+                            <th>Link</th>
+                            {{!-- <hr> --}}
+                     </tr> 
                     {{# each items }}
-                       
-                             <div>product_name: {{ this.product_name }}</div>
-                            <div>price: {{ this.price }}</div>
-                            <div>kg: {{ this.kg }}</div>
-                            <div>date: {{ this.date }}</div>
-                            <div>type: {{ this.types }}</div>
-                            <a href="/map">Find Place</a>
-                            <hr>
-                       
+                    
+                     <tr>
+                        <td>{{ this.farmer_name }}</td>
+                        <td>{{ this.farmer_number }}</td>
+                        <td> {{ this.farmer_address }}</td>
+                        <td>{{ this.product_name }}</td>
+                        <td>{{ this.price }}</td>
+                        <td>{{ this.kg }}</td>
+                        <td>{{ this.date }}</td>
+                        <td>{{ this.types }}</td>
+                        <td><a href="/pass-data/{{this.farmer_number}}">goto</a></td>
+
+                     </tr>
+                     
                     {{/each}}
                
-              </div>
+              </table>
         </div><br/>
       </div>
       <!-- /.row -->
